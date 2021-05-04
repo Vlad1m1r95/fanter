@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+.button {
+  display: inline-grid;
+  grid-auto-flow: column;
+  
+  border: none;
+  box-sizing: border-box;
+  border-radius: $borderButton;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding: 0.69em 1em;
+  justify-content: center;
+  min-width: 138px;
+
+
+  font-size: 16px;
+  column-gap: 0.5em;
+  
+  svg {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.buttonGrey {
+  background: $backgroundButtonGrey;
+  color: $colorDarkBlue;
+  svg {
+    path {
+      fill : $colorDarkBlue;
+    }
+  }
+}
+
+.buttonBlue {
+  background: $backgroundButton;
+  color: $colorWhite;
+  svg {
+    path {
+      fill: $colorWhite;
+    }
+  }
+}

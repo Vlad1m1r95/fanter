@@ -1,0 +1,6 @@
+.gridContent {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 708px);
+
+}

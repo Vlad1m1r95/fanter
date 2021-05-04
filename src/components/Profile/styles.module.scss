@@ -1,0 +1,109 @@
+@import '../../styles/variables.scss';
+.profile {
+  padding-top: 26px;
+  padding-bottom: 51px;
+  margin-top: -84px;
+  position: relative;
+  z-index: 4;
+  background: #FFFFFF;
+  border-radius: 40px;
+  min-height: 236px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.conteiner {
+  display: inline-grid;
+  grid-template-columns: 1fr  repeat(2, minmax(auto, 391px)) ;
+  grid-auto-flow: column;
+  grid-gap: 38px
+
+
+}
+
+.logo  {
+  position: relative;
+  &:after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #0B9E62;
+    border: 2px solid #FFFFFF;
+    position: absolute;
+    top: 30px;
+    z-index: 100;
+    top: 77px;
+    right: 22px;
+  
+
+  }
+}
+
+
+.logoContainer {
+  transform: translateY(calc(-1 * (26px + 43px)));
+  width: 179px;
+  height: 179px;
+  border-radius: 50%;
+  background: $colorGreyPreload;
+  overflow: hidden;
+  border: 3px solid #FFFFFF;  
+  position: relative;
+
+ 
+ 
+}
+
+.info {
+  font-family: $fontSemiBold;
+  font-weight: 600;
+}
+
+.userName {
+  font-size: 16px;
+  font-style: normal;
+}
+
+.personName {
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.userLocation {
+  font-family:  $fontRegular;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $colorGrey;
+  margin-top: 9px;
+  
+}
+
+.personInfo {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 16.71px;
+  color : $colorBlack;
+  margin-top: 15px;
+  span:not(:first-child){
+    margin-left: 8px;
+  }
+}
+
+
+
+
+.buttonGroup {
+  margin-top: 16px;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 13px
+}
+
+.hashTag {
+  color: $colorDarkBlue
+}
+

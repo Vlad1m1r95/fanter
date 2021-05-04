@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+.userProfile {
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: 8px;
+}
+
+
+.greetings {
+  font-size: 10px;
+  line-height: 12px;
+  color: $colorWhitePurple
+}
+
+.userName {
+  font-family: $fontBold;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.exit {
+
+}
+
+.logoContainer {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: $colorGreyPreload;
+  overflow: hidden;  
+}

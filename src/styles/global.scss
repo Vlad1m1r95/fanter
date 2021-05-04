@@ -1,0 +1,9 @@
+@import './variables.scss';
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "SFProDisplayRegular", sans-serif;
+  background: $background;
+}

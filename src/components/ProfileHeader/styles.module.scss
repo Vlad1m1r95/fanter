@@ -1,0 +1,25 @@
+.profileHeader {
+  position: relative;
+  height: 375px;
+
+  overflow: hidden;
+  svg {
+    position: absolute;
+    z-index: 2;
+    bottom:  25%;
+    right: 3%;
+  }
+  img {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%
+  }
+  img:first-of-type {
+    z-index: 3;
+
+  }
+  img:last-of-type {
+    z-index: 1;
+  }
+}
