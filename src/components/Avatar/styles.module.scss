@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+.avatar {
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  background: $colorGreyPreload;
+}
+
+
+.profile {
+  transform: translateY(calc(-1 * (26px + 43px)));
+  width: 179px;
+  height: 179px;
+  
+  border: 3px solid $colorWhite;  
+}
+
+.profileHeader {
+  height: 55px;
+  width: 55px;
+}
+
+.vipBanner {
+  height: 60px;
+  width: 60px;
+  background: $colorDarkBlue;
+  border: 2px solid #FFFFFF;
+}
+
+.post {
+  height: 54px;
+  width: 54px;
+}
+
+
+.comment {
+  height: 27px;
+  width: 27px;
+}

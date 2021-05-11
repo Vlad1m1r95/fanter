@@ -1,0 +1,113 @@
+@import '../../styles/variables.scss';
+
+.post {
+  margin-top: 20px;
+  grid-column: 1 / span 2;
+  box-shadow: $boxShadowPost;
+  border-radius: $borderRadiusPost;
+  background: $colorWhite;
+  padding: 14px 22px 20px 22px;
+ 
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authorHeader {
+  display: flex;
+  align-items: center;
+  
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.authorName {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 600;
+}
+
+.datePublishPost {
+  font-size: 13px;
+  margin-top: 13px;
+  line-height: 0px;
+  font-weight: 400;
+}
+
+
+
+.authorPhotoContainer {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: $colorGreyPreload;
+  overflow: hidden;
+
+}
+
+
+.authorInfo {
+  display: flex;
+}
+
+.shareIcon {
+  width: 22px;
+  height: 21px;
+}
+
+.postBody {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+}
+.postEntity {
+  height: 469px;
+  width: 100%;
+  overflow: hidden;
+  background: #3A3B8D;
+  border-radius: 5px;
+}
+
+.postDescription {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    line-height: 0px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 20px;
+    margin-top: 5px;
+    color: $colorGreyLight
+  }
+}
+
+.likeConteiner {
+  span {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+    color: $colorDarkBlue
+  }
+  div > * + * {
+    margin-left: 10px;
+  }
+}
+
+.likeConteiner > * + * {
+  margin-left: 21px;
+}

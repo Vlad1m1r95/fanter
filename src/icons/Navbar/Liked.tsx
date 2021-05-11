@@ -2,7 +2,7 @@ import { FC, SVGAttributes } from "react";
 
 interface Props extends SVGAttributes<SVGElement> {}
 
-export const Post: FC<Props> = (props) => {
+export const Liked: FC<Props> = (props) => {
   return (
     <svg
       width="21"

@@ -8,7 +8,7 @@ import cn from "classnames";
 import { NavBar } from "../NavBar";
 
 const { content } = tokens;
-const { gridContent } = layoutStyles;
+const { gridContent, feed } = layoutStyles;
 export const Layout: FC = ({ children }) => {
   return (
     <>
@@ -17,7 +17,7 @@ export const Layout: FC = ({ children }) => {
       <Profile />
       <div className={cn(content, gridContent)}>
         <NavBar />
-        <div>{children}</div>
+        <div className={feed}>{children}</div>
       </div>
     </>
   );

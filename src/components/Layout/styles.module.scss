@@ -1,6 +1,14 @@
 .gridContent {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 708px);
+  grid-template-columns: 1fr minmax(auto, 708px) 1fr;
+  grid-gap: 98px
 
+}
+
+.feed {
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+  grid-gap: 23px;
+  margin-top: 41px;
 }

@@ -1,0 +1,143 @@
+@import '../../styles/variables.scss';
+.navbar {
+  display: grid;
+  grid-gap: 32px;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat( 5, 60px);
+  li {
+    cursor: pointer;
+    outline: none;
+    display: inline-grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: 26px auto;
+    grid-gap: 33px;   
+    font-weight: 600;
+    font-family: $fontSemiBold;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    color:  $colorLightBlue ;
+    .icon   {
+      width: 100%;
+      path {
+        fill: transparent;
+        stroke: $colorLightBlue;
+      }  
+    }
+
+    .iconVideo {
+      path {
+        fill: $colorLightBlue;
+      }
+    }
+
+    &:hover {
+      position: relative;
+      color:  $colorDarkBlue; 
+
+      .icon   {
+        position: relative;
+        z-index:  2;
+        path {
+          fill:  transparent;
+          opacity: 1;
+          stroke: $colorDarkBlue
+        }
+      }
+      .iconVideo {
+        position: relative;
+        z-index:  2;
+        g {
+          opacity: 1;
+        }
+        path {
+          fill: $colorDarkBlue;
+        }
+      }
+    }
+
+     &:focus  {
+      position: relative;
+      color:  $colorDarkBlue; 
+      .icon   {
+        position: relative;
+        z-index:  2;
+        path {
+          fill:  transparent;
+          opacity: 1;
+          stroke: $colorWhite
+        }
+      }
+      
+    
+      .iconVideo {
+        position: relative;
+        z-index:  2;
+        g {
+          opacity: 1;
+        }
+        path {
+         
+          fill: $colorWhite;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        transform: translate(-30%, -50%);
+        top: 50%;  
+        width: 60px;
+        height: 60px;
+       
+        border-radius: 50%;
+        background: linear-gradient(315.94deg, #313085 9.32%, #766BC0 111.01%);
+        z-index: 1;
+      }
+    }
+  }
+
+
+
+
+
+
+
+  
+}
+
+
+
+// li.active {
+//   position: relative;
+//   color:  $colorDarkBlue; 
+//   .icon   {
+//     position: relative;
+//     z-index:  2;
+//     path {
+//       fill:  transparent;
+//       stroke: $colorWhite
+//     }
+//   }
+
+//   .iconVideo {
+//     position: relative;
+//     z-index:  2;
+//     path {
+//       fill: $colorLightBlue;
+//     }
+//   }
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     transform: translate(-30%, -50%);
+//     top: 50%;  
+    
+//     width: 60px;
+//     height: 60px;
+//     border-radius: 50%;
+//     background: linear-gradient(315.94deg, #313085 9.32%, #766BC0 111.01%);
+//     z-index: 1;
+//   }
+// }

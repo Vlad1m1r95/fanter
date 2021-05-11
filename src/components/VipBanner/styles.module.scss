@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+
+.vipBanner {
+  position: relative;
+  height: 143px;
+
+  position: relative;
+}
+
+
+.background {
+  position: absolute;
+  height: 122px;
+  // height: fit-content
+}
+
+.content {
+  position: relative;
+  color: $colorWhite;
+  padding: 26px 28px;
+  display: grid;
+  grid-template-columns: 158px minmax(120px, 150px);
+  grid-template-rows: 85px;
+  grid-auto-flow: column;
+ 
+}
+
+.title {
+  font-family: $fontBold;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+
+.text {
+  font-family: $fontMedium;
+  font-size: 15px;
+  line-height: 16.5px;
+  margin-top: 10px;
+}
+
+.logoContainer {
+  position: relative;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #FFFFFF;
+
+}
+
+.crownImage {
+  margin-top: -40%;
+ 
+}
+
+.crownImageWithLogo {
+ 
+  margin-top: -71%;
+  margin-left: 11%;
+  
+}
+
+.showContent {
+ color: $colorBlack ;
+ font-family: $fontSemiBold;
+ font-size: 15px;
+ line-height: 15px;
+ margin-top: 10px;
+ margin-left: 26px;
+
+ svg {
+   margin-left: 10px
+ }
+}
+
