@@ -1,0 +1,101 @@
+@import '../../styles/variables.scss';
+.comments {
+  margin-top: 12px;
+
+ 
+}
+.commentsList {
+  padding-top: 12px;
+  border-top:  0.4px solid #B4B4D2;
+}
+
+.commentsList > * +* {
+
+ margin-top: 7px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  div {
+    font-weight: 600;
+   
+  }
+  span {
+    font-weight: 400; 
+    color: $colorGreyLight;
+  }
+}
+.comment > * + * {
+  margin-left: 9px;
+}
+
+.showMore {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 15px;
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: 7px;
+  color: $colorDarkBlue;
+  svg {
+    transform: rotate(90deg);
+    path {
+      stroke : $colorDarkBlue;
+    }
+
+  }
+  &:hover {
+    color: $colorLightBlue;
+    svg {
+      path {
+        stroke : $colorLightBlue;
+      }
+    }
+  }
+}
+
+.showAllComments {
+  display: inline-grid;
+  margin-left: 5px;
+  grid-auto-flow: column;
+  grid-gap: 14px;
+  align-items: center;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $colorDarkBlue;
+}
+
+.addComment {
+  margin-top: 20px;
+  position: relative;
+  input {
+    padding: 14px 25px;
+    border:none;
+   
+    background: $backgroundImput;
+    opacity: 0.6;
+    border-radius: 70px;
+    width: 100%;
+    height: 44px;
+  }
+  a {
+    top: 0;
+    top: 50%;
+    font-size: 15px;
+  
+    transform: translateY(-50%);
+    right: 25px;
+    position: absolute;
+    color: $colorDarkBlue;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

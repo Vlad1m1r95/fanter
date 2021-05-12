@@ -3,11 +3,15 @@ import "./styles/reset.css";
 import "./styles/fonts.scss";
 import "./styles/global.scss";
 import { Layout } from "./components/Layout";
-
 import { VipBanner } from "./components/VipBanner";
-
 import logo from "./components/Profile/KorobkovaProfileImage.jpg";
 import { Post } from "./components/Post";
+import {
+  FakeCommentsList,
+  FakeCommentsListEmpty,
+  FakeContentPost1,
+  FakeContentPost2,
+} from "./fakeContent";
 
 export const App: FC = () => {
   return (
@@ -32,7 +36,8 @@ content $35/mo"
         href="/"
       />
 
-      <Post />
+      <Post content={FakeContentPost1} commentsList={FakeCommentsList} />
+      <Post content={FakeContentPost2} commentsList={FakeCommentsListEmpty} />
     </Layout>
   );
 };

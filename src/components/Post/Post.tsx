@@ -28,38 +28,30 @@ const {
   likeConteiner,
 } = stylesPost;
 
-const FakeCommentsList: CommentProps[] = [
-  {
-    src: avatar1,
-    name: "Mandiri",
-    text: "Really good mask",
-  },
+export interface PostProps {
+  content: {
+    media: string;
+    avatar: string;
+    authorName: string;
+    datePublishPost: string;
+  };
+  commentsList: CommentProps[];
+}
 
-  {
-    src: avatar2,
-    name: "Jonesen Pi",
-    text: "I want nothing samilar",
-  },
-
-  {
-    src: avatar2,
-    name: "Piter",
-    text:
-      "Where you bouth this mask, in seven eleven? I saw it there, price cost 20thb...",
-  },
-];
-
-export const Post: FC = () => {
+export const Post: FC<PostProps> = ({
+  content: { media, avatar, authorName: author, datePublishPost: date },
+  commentsList,
+}) => {
   return (
     <div className={post}>
       <div className={postHeader}>
         <div className={authorHeader}>
           <div className={authorPhotoContainer}>
-            <img className={authorPhoto} src={authorPhoto} alt="" />
+            <img className={authorPhoto} src={avatar} alt="?" />
           </div>
           <div className={authorInfo}>
-            <div className={authorName}>n.korobkova</div>
-            <div className={datePublishPost}>12 hours ago</div>
+            <div className={authorName}>{author}</div>
+            <div className={datePublishPost}>{date}</div>
           </div>
 
           <div className={sharePost}></div>
@@ -68,7 +60,7 @@ export const Post: FC = () => {
       </div>
       <div className={postBody}>
         <div className={postEntity}>
-          <img src={post1} alt="" />
+          <img src={media} alt="" />
         </div>
         <div className={postDescription}>
           <div>
@@ -86,7 +78,7 @@ export const Post: FC = () => {
           <p>I think it is just wonderfull, care to share please</p>
         </div>
       </div>
-      <Comments commentsListArray={FakeCommentsList} />
+      <Comments commentsListArray={commentsList} />
     </div>
   );
 };
