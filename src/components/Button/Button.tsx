@@ -1,18 +1,18 @@
-import { FC, HTMLAttributes, ReactNode } from "react";
+import {FC, HTMLAttributes, ReactHTMLElement, ReactNode} from "react";
 import buttonStyles from "./styles.module.scss";
 import cn from "classnames";
 
 const { button, buttonBlue, buttonGrey } = buttonStyles;
-export interface Props extends HTMLAttributes<HTMLButtonElement> {
+export interface Props extends  React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   icon: ReactNode;
-  type?: "grey" | "blue";
+  color?: "grey" | "blue";
 }
-export const Button: FC<Props> = ({ icon, type = "blue", children }, props) => {
+export const Button: FC<Props> = ({ icon, color = "blue", children }, ...props) => {
   return (
     <button
       className={cn(button, {
-        [buttonBlue]: type === "blue",
-        [buttonGrey]: type === "grey",
+        [buttonBlue]: color === "blue",
+        [buttonGrey]: color === "grey",
       })}
       {...props}
     >
