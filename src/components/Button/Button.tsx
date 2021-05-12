@@ -7,7 +7,7 @@ export interface Props extends  React.DetailedHTMLProps<React.ButtonHTMLAttribut
   icon: ReactNode;
   color?: "grey" | "blue";
 }
-export const Button: FC<Props> = ({ icon, color = "blue", children }, ...props) => {
+export const Button: FC<Props> = ({ icon, color = "blue", children ,...props}) => {
   return (
     <button
       className={cn(button, {
@@ -15,6 +15,7 @@ export const Button: FC<Props> = ({ icon, color = "blue", children }, ...props) 
         [buttonGrey]: color === "grey",
       })}
       {...props}
+
     >
       {icon} {children}
     </button>
