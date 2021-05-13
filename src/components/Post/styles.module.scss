@@ -71,9 +71,48 @@
   height: 469px;
   width: 100%;
   overflow: hidden;
-  background: #3A3B8D;
+  background: $colorBlue;
   border-radius: 5px;
 }
+
+.postEntityBlack {
+  background: $colorDarknessGrey
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  img {
+    width: 58px;
+    height: 58px;
+  }
+  button {
+    margin-top: 30px;
+  }
+}
+
+.statusTitle {
+  margin-top: 28px;
+  font-weight: 600px;
+  font-size: 22px;
+  line-height: 25px;
+  color: $colorWhite
+}
+
+.statusDescription {
+  margin-top: 15px;
+  font-weight: 400px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $colorDarkGrey;
+  max-width: 182px;
+  text-align: center;
+}
+
 
 .postDescription {
   margin-top: 20px;

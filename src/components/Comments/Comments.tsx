@@ -41,10 +41,9 @@ export const Comments: FC<CommentsProps> = ({ commentsListArray }) => {
               </li>
             ))}
           </ul>
-          <div className={showAllComments}>
-            {" "}
+          <button className={showAllComments}>
             <Comment /> Show comments (56)
-          </div>
+          </button>
         </>
       )}
 

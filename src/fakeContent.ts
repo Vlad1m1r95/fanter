@@ -11,6 +11,8 @@ export const FakeContentPost1: PostProps["content"] = {
   avatar: "./avatar1.png",
   authorName: "n.korobkova",
   datePublishPost: "12 hours ago",
+  postTitle: "My beautiful sunny day",
+  postDescription: "I think it is just wonderfull, care to share please",
 };
 
 export const FakeContentPost2: PostProps["content"] = {
@@ -18,6 +20,8 @@ export const FakeContentPost2: PostProps["content"] = {
   avatar: "./avatar2.png",
   authorName: "n.korobkova",
   datePublishPost: "12 hours ago",
+  postTitle: "My beautiful sunny day",
+  postDescription: "I think it is just wonderfull, care to share please",
 };
 
 export const FakeCommentsList: CommentProps[] = [

@@ -1,20 +1,20 @@
 import { FC } from "react";
 import stylesPost from "./styles.module.scss";
 import authorPhoto from "../Profile/KorobkovaProfileImage.jpg";
-import post1 from "./postImage1.png";
 
 import { Share } from "../../icons/Share";
 import { Coin } from "../../icons/Coin";
 import { Like } from "../../icons/Like";
 import { Comments, CommentProps } from "../Comments/Comments";
-
-import avatar1 from "./fakeCommentsAvatar/Mandiri.png";
-import avatar2 from "./fakeCommentsAvatar/Peter.png";
+import cn from "classnames";
+import { Status } from "./Status";
 
 const {
   post,
   postHeader,
   postBody,
+  postEntity,
+  postEntityBlack,
   comments,
   authorHeader,
   authorInfo,
@@ -23,7 +23,7 @@ const {
   datePublishPost,
   sharePost,
   shareIcon,
-  postEntity,
+
   postDescription,
   likeConteiner,
 } = stylesPost;
@@ -34,13 +34,36 @@ export interface PostProps {
     avatar: string;
     authorName: string;
     datePublishPost: string;
+    postTitle: string;
+    postDescription: string;
   };
+  status: "loading" | "failed" | "success";
+  loadingText: string;
+  loaadingDescription: string;
+  errorText: string;
+  errorDescription: string;
   commentsList: CommentProps[];
+  likes: number;
+  showTipp: boolean;
 }
 
 export const Post: FC<PostProps> = ({
-  content: { media, avatar, authorName: author, datePublishPost: date },
+  content: {
+    media,
+    avatar,
+    authorName: author,
+    datePublishPost: date,
+    postTitle: title,
+    postDescription: description,
+  },
   commentsList,
+  status,
+  loadingText,
+  loaadingDescription,
+  errorText,
+  errorDescription,
+  likes,
+  showTipp,
 }) => {
   return (
     <div className={post}>
@@ -59,23 +82,57 @@ export const Post: FC<PostProps> = ({
         <Share className={shareIcon} />
       </div>
       <div className={postBody}>
-        <div className={postEntity}>
-          <img src={media} alt="" />
+        <div
+          className={cn(postEntity, {
+            [postEntityBlack]: status === "loading" || "error",
+          })}
+        >
+          {status === "success" && <img src={media} alt="" />}
+          {status === "loading" && (
+            <Status
+              status="loading"
+              title={loadingText}
+              description={loaadingDescription}
+            />
+          )}
+          {status === "failed" && (
+            <Status
+              status="failed"
+              title={errorText}
+              description={errorDescription}
+            />
+          )}
         </div>
+
         <div className={postDescription}>
           <div>
-            My beautiful sunny day
+            {title}
             <div className={likeConteiner}>
-              <div>
-                <Like /> <span>892 </span>
-              </div>
-              <div>
-                <Coin />
-                <span>Tipp</span>
-              </div>
+              {status !== "loading" && status !== "failed" ? (
+                <>
+                  <div>
+                    <Like /> <span>892 </span>
+                  </div>
+                  {showTipp && (
+                    <div>
+                      <Coin />
+                      <span>Tipp</span>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div>
+                  <Like
+                    opacity={
+                      status !== "loading" && status !== "failed" ? 1 : 0.3
+                    }
+                  />
+                  <span>{likes}</span>
+                </div>
+              )}
             </div>
           </div>
-          <p>I think it is just wonderfull, care to share please</p>
+          <p>{description}</p>
         </div>
       </div>
       <Comments commentsListArray={commentsList} />

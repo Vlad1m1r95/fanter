@@ -36,8 +36,56 @@ content $35/mo"
         href="/"
       />
 
-      <Post content={FakeContentPost1} commentsList={FakeCommentsList} />
-      <Post content={FakeContentPost2} commentsList={FakeCommentsListEmpty} />
+      <Post
+        content={FakeContentPost1}
+        commentsList={FakeCommentsList}
+        status="success"
+        loadingText="Your video uploading..."
+        loaadingDescription="Soon video will be available
+        this information see only you"
+        errorText="Opps, video converting error"
+        errorDescription="Your video can’t be uploaded"
+        likes={888}
+        showTipp={true}
+      />
+      <Post
+        content={FakeContentPost2}
+        commentsList={FakeCommentsListEmpty}
+        status="success"
+        loadingText="Your video uploading..."
+        loaadingDescription="Soon video will be available
+      this information see only you"
+        errorText="Opps, video converting error"
+        errorDescription="Your video can’t be uploaded"
+        likes={999}
+        showTipp={false}
+      />
+
+      <Post
+        content={FakeContentPost2}
+        commentsList={FakeCommentsListEmpty}
+        status="loading"
+        loadingText="Your video uploading..."
+        loaadingDescription="Soon video will be available
+      this information see only you"
+        errorText="Opps, video converting error"
+        errorDescription="Your video can’t be uploaded"
+        likes={444}
+        showTipp={true}
+      />
+
+      <Post
+        content={FakeContentPost2}
+        commentsList={FakeCommentsListEmpty}
+        status="failed"
+        loadingText="Your video uploading..."
+        loaadingDescription="Soon video will be available
+      this information see only you"
+        errorText="Opps, video converting error"
+        errorDescription="Your video can’t be uploaded"
+        likes={777}
+        showTipp={true}
+      />
     </Layout>
   );
 };
