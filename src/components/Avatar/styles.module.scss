@@ -4,6 +4,7 @@
   position: relative;
   border-radius: 50%;
   background: $colorGreyPreload;
+  flex-shrink: 0
 }
 
 
@@ -11,7 +12,6 @@
   transform: translateY(calc(-1 * (26px + 43px)));
   width: 179px;
   height: 179px;
-  
   border: 3px solid $colorWhite;  
 }
 
@@ -36,4 +36,15 @@
 .comment {
   height: 27px;
   width: 27px;
+}
+
+
+@media(max-width: 1023px){
+  .profile {
+    
+    transform: unset;
+    width: 96px;
+    height: 96px;
+    border: none
+  }
 }

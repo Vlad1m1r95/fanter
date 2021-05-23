@@ -92,3 +92,24 @@
   width: 88px;
   height: 38.62px;
 }
+.moblieLogo {
+  display: none;
+}
+
+
+@media(max-width: 1023px){
+  .contentHeader {
+    display: none;
+}
+
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+  .moblieLogo {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -7,3 +7,13 @@ body {
   font-family: "SFProDisplayRegular", sans-serif;
   background: $background;
 }
+
+
+
+
+@media(max-width: 576px){
+  body {
+  
+    background: $colorWhite;
+  }
+}

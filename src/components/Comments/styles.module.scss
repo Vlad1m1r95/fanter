@@ -128,3 +128,24 @@
     }
   }
 }
+
+
+@media(max-width: 1024px){
+  .comment {
+    font-size: 14px;
+
+    span {
+      font-weight: 400;
+      color: #656178;
+      /* max-width: 120px; */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      /* background: #fc0; */
+      padding: 5px;
+      text-overflow: ellipsis;
+    }
+  }
+ 
+}

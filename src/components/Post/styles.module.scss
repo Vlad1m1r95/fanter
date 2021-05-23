@@ -68,7 +68,7 @@
   flex-direction: column;
 }
 .postEntity {
-  height: 469px;
+  max-height: 469px;
   width: 100%;
   overflow: hidden;
   background: $colorBlue;
@@ -85,6 +85,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 134px 0;
   height: 100%;
   img {
     width: 58px;
@@ -149,4 +150,53 @@
 
 .likeConteiner > * + * {
   margin-left: 21px;
+}
+
+@media(max-width: 576px) {
+
+  .post {
+    padding: 14px 0;
+    box-shadow: none;
+    margin-top: 12px;
+  }
+  .postEntity {
+    height: fit-content;
+    max-height: 329px;
+    overflow: hidden;
+    margin-left: calc(-8px * 3 + 2px);
+    width: 100vw;
+    border-radius: 0;
+    margin-left: -8px;
+  }
+
+
+  .postDescription {
+
+    p {
+      font-size: 15px;
+    }
+   
+    div {
+      font-size: 16px;
+    }
+  }
+
+  .status {
+    padding: 54px 0;
+  }
+
+  .statusTitle {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .statusDescription {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .commentsList {
+    padding-bottom: 12px;
+    border-bottom: 0.4px solid #B4B4D2;
+  }
 }

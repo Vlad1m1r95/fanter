@@ -6,13 +6,19 @@ interface Props {
   type: "profileHeader" | "profile" | "post" | "vipBanner" | "comment";
   src: string;
   alt: string;
+  className?: string;
 }
 
 const { avatar } = AvatarStyles;
 
-export const Avatar: FC<Props> = ({ type = "post", src = "?", alt = "?" }) => {
+export const Avatar: FC<Props> = ({
+  className,
+  type = "post",
+  src = "?",
+  alt = "?",
+}) => {
   return (
-    <div className={cn(avatar, AvatarStyles[`${type}`])}>
+    <div className={cn(avatar, AvatarStyles[`${type}`], className)}>
       <img src={src} alt={alt} />
     </div>
   );

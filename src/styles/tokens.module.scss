@@ -10,6 +10,9 @@
 @media (max-width: 1024px) {
   .content {
     max-width: calc(896px + 2 * 64px);
+
+    padding-left: 8px;
+    padding-right: 8px;  
   }
 }
 

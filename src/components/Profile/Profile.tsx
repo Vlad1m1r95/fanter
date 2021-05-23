@@ -7,9 +7,12 @@ import { Follow } from "../../icons/Follow";
 import { Message } from "../../icons/Message";
 import { Location } from "../../icons/Location";
 import KorobkovaProfileImage from "./KorobkovaProfileImage.jpg";
+import { Avatar } from "../Avatar";
 const {
   profile,
-  conteiner,
+  container,
+  wrapper,
+  description,
   logo,
   logoContainer,
   info,
@@ -17,8 +20,12 @@ const {
   personName,
   userLocation,
   personInfo,
+  personInfoMobile,
   buttonGroup,
   hashTag,
+  avatarDesktop,
+  avatarMobile,
+  infoHeaderMobile,
 } = profileStyles;
 const { content } = tokens;
 
@@ -26,31 +33,47 @@ export const Profile: FC = () => {
   return (
     <div className={profile}>
       <div className={cn(content)}>
-        <div className={conteiner}>
-          <div className={logo}>
-            <div className={logoContainer}>
-              <img src={KorobkovaProfileImage} alt="" />
+        <div className={container}>
+          <div className={wrapper}>
+            <div className={cn(logo, avatarDesktop)}>
+              <Avatar type="profile" src={KorobkovaProfileImage} alt="" />
+            </div>
+            <div className={info}>
+              <div className={infoHeaderMobile}>
+                <div className={cn(logo, avatarMobile)}>
+                  <Avatar
+                    className={avatarMobile}
+                    type="profile"
+                    src={KorobkovaProfileImage}
+                    alt=""
+                  />
+                </div>
+
+                <div>
+                  <div className={userName}> @n.korobkova</div>
+                  <h1 className={personName}>Nadya Korobkova</h1>
+                  <div className={userLocation}>
+                    <Location /> United State, New York
+                  </div>
+                </div>
+              </div>
+
+              <div className={personInfo}>
+                <span>29 years</span> <span>I speak English, Spanish</span>
+              </div>
+              <div className={buttonGroup}>
+                <Button icon={<Follow />}>Follow</Button>
+                <Button icon={<Message />}>Message</Button>
+              </div>
+
+              <div className={personInfoMobile}>
+                <span>29 years</span> <span>I speak English, Spanish</span>
+              </div>
             </div>
           </div>
 
-          <div className={info}>
-            <div className={userName}> @n.korobkova</div>
-            <h1 className={personName}>
-              Nadya Korobkova
-              <div className={userLocation}>
-                <Location /> United State, New York
-              </div>
-            </h1>
-            <div className={personInfo}>
-              <span>29 years</span> <span>I speak English, Spanish</span>
-            </div>
-            <div className={buttonGroup}>
-              <Button icon={<Follow />}>Follow</Button>
-              <Button icon={<Message />}>Message</Button>
-            </div>
-          </div>
-          <div>
-            You can call me Jacky!{" "}
+          <div className={description}>
+            You can call me Jacky!
             <a className={hashTag} href="#DiosConmigo">
               #DiosConmigo
             </a>{" "}

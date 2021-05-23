@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .profileHeader {
   position: relative;
   height: 375px;
@@ -6,9 +8,19 @@
   svg {
     position: absolute;
     z-index: 2;
+    cursor: pointer;
+    transition: all 0.5s;
+   
+  }
+
+  svg:first-of-type  {
     bottom:  25%;
     right: 3%;
   }
+  svg:last-of-type  {
+   display: none;
+  }
+
   img {
     position: absolute;
     object-fit: cover;
@@ -21,5 +33,32 @@
   }
   img:last-of-type {
     z-index: 1;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .profileHeader {
+    height: 323px;
+    svg {
+      z-index: 100;
+    }
+    svg:first-of-type {
+      top: 22px;
+      &:hover {
+        transform: rotate(90deg) scale(1.05);
+      }
+    }
+
+    svg:last-of-type {
+      display: block;
+      top: 22px;
+      left: 6%;
+      &:hover {
+        path {
+          stroke: darken($colorWhite, 30%);
+        }
+      }
+    }
   }
 }

@@ -4,8 +4,18 @@ import { Logo } from "../../icons/Logo";
 import { TimeLine } from "../../icons/TimeLine";
 import headerStyles from "./styles.module.scss";
 import { UserProfile } from "../UserProfile/UserProfile";
+import { MoblieLogo } from "../../icons/MobileLogo";
 
-const { header, content, contentHeader, logo, barItem, badge } = headerStyles;
+const {
+  header,
+  content,
+  contentHeader,
+  logo,
+  barItem,
+  badge,
+  moblieLogo,
+  mobileHeader,
+} = headerStyles;
 export const Header: FC = () => {
   return (
     <div className={header}>
@@ -29,6 +39,9 @@ export const Header: FC = () => {
           <div className={barItem}>
             <UserProfile />
           </div>
+        </div>
+        <div className={mobileHeader}>
+          <MoblieLogo className={moblieLogo} />
         </div>
       </div>
     </div>
